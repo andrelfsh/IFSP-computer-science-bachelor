@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h1>Calculadora Web</h1>
+
+        <form method="get" action="processaDadosCliente">
+
+            <label>Número 1: </label>
+            <input type="number" name="num1" required/>
+            <br/>
+
+            <label>Número 2: </label>
+            <input type="number" name="num2" required/>
+            <br/>
+            
+
+
+            <input type="radio" name="conta" value="+" required/> Soma
+            <input type="radio" name="conta" value="-"/> Subtrai
+            <input type="radio" name="conta" value="*"/> Multiplica
+            <input type="radio" name="conta" value="/"/> Divide
+
+            <br/>
+
+            <input type="submit" value="Enviar Dados"/>
+
+        </form>
+        
+    </body>
+</html>
