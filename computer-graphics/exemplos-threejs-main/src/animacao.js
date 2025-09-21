@@ -30,6 +30,10 @@ const geometria = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial(
     {wireframe: true, color: 0xff0000}); // cor
 
+const euler = new THREE.Euler(0, Math.PI/2, 0);
+const quaternion = new THREE.Quaternion();
+quaternion.setFromEuler(euler);
+
 // Passo 3: gerar o objeto!
 const cubo = new THREE.Mesh(geometria, material);
 
