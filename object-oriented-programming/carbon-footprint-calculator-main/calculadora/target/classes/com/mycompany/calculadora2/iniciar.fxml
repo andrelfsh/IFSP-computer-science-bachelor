@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.calculadora2.Controladores">  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="382.0" prefWidth="590.0" style="-fx-background-color: #ddead1;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="440.0" fitWidth="724.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TelaInicial.jpeg" />
+               </image>
+            </ImageView>
+        <Button fx:id="botaoIniciar" layoutX="274.0" layoutY="326.0" mnemonicParsing="false" onAction="#mudarParaEletricidade" prefHeight="20.0" prefWidth="113.0" rotate="-0.0" style="-fx-background-color: #fc6f0e;" text="Calcular" textFill="WHITE">
+            <font>
+                <Font name="DejaVu Sans Bold" size="18.0" />
+            </font>
+        </Button>
+            <Text fill="#a4e4af" layoutX="159.0" layoutY="103.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="EcoCalc" textAlignment="CENTER" wrappingWidth="343.98046875">
+               <font>
+                  <Font name="Times New Roman" size="100.0" />
+               </font>
+            </Text>
+            <Text fill="#a4e4af" layoutX="207.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculadora de Pegada de Carbono" wrappingWidth="246.671875">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="113.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calcule agora sua pegada de carbono e descubra como suas escolhas diárias impactam o meio ambiente." textAlignment="CENTER" wrappingWidth="435.1480712890625">
+               <font>
+                  <Font name="Eras Medium ITC" size="17.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="94.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A pegada de carbono é uma medida que avalia a quantidade de gases de efeito estufa liberados no meio ambiente devido às suas atividades diárias" textAlignment="CENTER" wrappingWidth="473.548095703125">
+               <font>
+                  <Font name="Eras Medium ITC" size="17.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

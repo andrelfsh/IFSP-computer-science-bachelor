@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.calculadora2.Controladores">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #ddead1;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="440.0" fitWidth="724.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TelaQuestões.png" />
+               </image>
+            </ImageView>
+            <Text fill="#a4e4af" layoutX="56.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qual o valor da sua conta mensal de óleo?">
+               <font>
+                  <Font name="DejaVu Sans" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="263.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button fx:id="botaoOleo" layoutX="477.0" layoutY="349.0" mnemonicParsing="false" onAction="#mudarParaGas" prefHeight="37.0" prefWidth="137.0" style="-fx-background-color: #fc6f0e;" text="Anterior" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+            </Button>
+            <RadioButton layoutX="69.0" layoutY="136.0" mnemonicParsing="false" onAction="#botaoUmOleo" prefHeight="24.0" prefWidth="299.0" text="Menos de R$30" textFill="#a4e4af">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="carbono" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="69.0" layoutY="176.0" mnemonicParsing="false" onAction="#botaoDoisOleo" prefHeight="24.0" prefWidth="299.0" text="Entre R$30 e R$60" textFill="#a4e4af" toggleGroup="$carbono">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="69.0" layoutY="220.0" mnemonicParsing="false" onAction="#botaoTresOleo" prefHeight="24.0" prefWidth="299.0" text="Entre R$61 e R$90" textFill="#a4e4af" toggleGroup="$carbono">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="69.0" layoutY="260.0" mnemonicParsing="false" onAction="#botaoQuatroOleo" prefHeight="24.0" prefWidth="299.0" text="Entre R$91 e R$120" textFill="#a4e4af" toggleGroup="$carbono">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="69.0" layoutY="304.0" mnemonicParsing="false" onAction="#botaoCincoOleo" prefHeight="24.0" prefWidth="299.0" text="Mais de R$120" textFill="#a4e4af" toggleGroup="$carbono">
+               <font>
+                  <Font name="DejaVu Sans" size="14.0" />
+               </font>
+            </RadioButton>
+            <Button fx:id="botaoOleo1" layoutX="477.0" layoutY="298.0" mnemonicParsing="false" onAction="#mudarParaCarro" prefHeight="37.0" prefWidth="137.0" style="-fx-background-color: #fc6f0e;" text="Proximo" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+            </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.calculadora2.Grafico">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #ddead1;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="440.0" fitWidth="724.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TelaFinal.jpeg" />
+               </image>
+            </ImageView>
+            <Text layoutX="155.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="299.748046875" />
+            <Text fill="WHITE" layoutX="386.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Esta é sua emissão de carbono em comparação com a média de outros paises. É crucial entender como seu consumo afeta o meio ambiente. Fique atento à sua emissão de carbono e busque sempre reduzi-la." wrappingWidth="244.80002441406236">
+               <font>
+                  <Font name="Eras Medium ITC" size="14.0" />
+               </font></Text>
+            <Text fill="#a4e4af" layoutX="138.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EcoCalc" textAlignment="CENTER" wrappingWidth="362.18048095703125">
+               <font>
+                  <Font name="Times New Roman" size="84.0" />
+               </font>
+            </Text>
+            <Button layoutX="391.0" layoutY="310.0" mnemonicParsing="false" onAction="#reiniciar" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #fc6f0e;" text="Calcule novamente" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <BarChart fx:id="barChart" layoutY="88.0" prefHeight="298.0" prefWidth="370.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+           <Label fx:id="resultadoLabel" layoutX="385.0" layoutY="244.0" prefHeight="18.0" prefWidth="234.0" text="Classificação:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label fx:id="resultado1Label" layoutX="385.0" layoutY="271.0" prefHeight="18.0" prefWidth="261.0" text="Seu resultado:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
