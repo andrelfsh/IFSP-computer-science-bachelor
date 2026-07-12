@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Verdes (tema principal) -->
+    <color name="green_50">#EAF3DE</color>
+    <color name="green_100">#C0DD97</color>
+    <color name="green_600">#1D9E75</color>
+    <color name="green_700">#0F6E56</color>
+
+    <!-- Vermelhos (despesas) -->
+    <color name="red_50">#FCEBEB</color>
+    <color name="red_100">#F7C1C1</color>
+    <color name="red_600">#A32D2D</color>
+    <color name="red_700">#791F1F</color>
+
+    <!-- Superfícies -->
+    <color name="background_page">#F4F4F0</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="border">#26000000</color>  <!-- ~15% alpha black -->
+
+    <!-- Texto -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#1A1A1A</color>
+    <color name="text_tertiary">#9E9E99</color>
+
+</resources>

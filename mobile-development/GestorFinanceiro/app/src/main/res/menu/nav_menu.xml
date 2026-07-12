@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ── NAVEGAÇÃO PRINCIPAL ── -->
+    <item android:title="Principal">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_inicio"
+                    android:icon="@drawable/ic_file_description"
+                    android:title="Visão Geral" />
+
+                <item
+                    android:id="@+id/nav_relatorios"
+                    android:icon="@drawable/ic_trending_up"
+                    android:title="Gráficos e Relatórios" />
+            </group>
+        </menu>
+    </item>
+
+    <!-- ── FILTROS DO HISTÓRICO ── -->
+    <item android:title="Filtros do Histórico">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_filtro_tudo"
+                    android:icon="@drawable/ic_file_description"
+                    android:title="Mostrar Tudo" />
+                <item
+                    android:id="@+id/nav_filtro_receitas"
+                    android:icon="@drawable/ic_trending_up"
+                    android:title="Apenas Receitas" />
+                <item
+                    android:id="@+id/nav_filtro_despesas"
+                    android:icon="@drawable/ic_trending_down"
+                    android:title="Apenas Despesas" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Ações do Sistema">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_exportar"
+                    android:icon="@android:drawable/ic_menu_save"
+                    android:title="Baixar Planilha (CSV)" />
+                <item
+                    android:id="@+id/nav_limpar"
+                    android:icon="@android:drawable/ic_menu_delete"
+                    android:title="Limpar Todos os Dados" />
+            </group>
+            <item
+                android:id="@+id/nav_backup"
+                android:icon="@drawable/ic_cloud_upload"
+                android:title="Fazer Backup na Nuvem" />
+        </menu>
+    </item>
+
+</menu>

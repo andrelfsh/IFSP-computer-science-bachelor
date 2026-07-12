@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <!-- Ícone circular da categoria -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivIcone"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="12dp"
+        android:padding="9dp"
+        app:shapeAppearanceOverlay="@style/ShapeCircle"
+        android:src="@drawable/ic_receipt"
+        tools:backgroundTint="@color/green_100"
+        app:tint="@color/green_700"
+        android:contentDescription="@null"/>
+
+    <!-- Descrição + data -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd/mm/aaaa"
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- Valor -->
+    <TextView
+        android:id="@+id/tvValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="+R$ 5.000"
+        tools:textColor="@color/green_700"/>
+
+    <TextView
+        android:id="@+id/tvCategoriaItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#757575"
+
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:layout_marginTop="2dp"
+        tools:text="Alimentação" />
+
+
+
+</LinearLayout>

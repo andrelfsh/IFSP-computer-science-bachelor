@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ficha do Criminoso (ID):" />
+    <EditText android:id="@+id/edID" android:layout_width="match_parent" android:layout_height="wrap_content" android:enabled="false" android:hint="Automático" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Codinome do Vilão:" />
+    <EditText android:id="@+id/edNome" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ex: Coringa" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nível de Perigo (1 a 5):" />
+    <EditText android:id="@+id/edPerigo" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="" android:inputType="number" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="end" android:layout_marginTop="12dp">
+        <Button android:id="@+id/btnNovo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Limpar" android:onClick="novo" android:layout_marginRight="8dp"/>
+        <Button android:id="@+id/btnSalvar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Registrar" android:onClick="salvar" />
+    </LinearLayout>
+
+    <ListView android:id="@+id/lvViloes" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="12dp" />
+</LinearLayout>

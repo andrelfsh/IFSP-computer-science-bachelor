@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_page">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarRelatorios"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green_600"
+        app:title="Gráficos e Relatórios"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:navigationIconTint="@android:color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ── CARD RESUMO RÁPIDO ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:weightSum="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0.5dp"
+                    app:strokeColor="@color/border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/dot_green"
+                                android:layout_marginEnd="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Receitas"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvResumoReceitas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="R$ 1.100,00"
+                            android:textColor="@color/green_700"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0.5dp"
+                    app:strokeColor="@color/border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                            <View
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:background="@drawable/dot_red"
+                                android:layout_marginEnd="6dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Despesas"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvResumoDespesas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="R$ 1.024,00"
+                            android:textColor="@color/red_600"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- ── CARD GRÁFICO DE PIZZA (por categoria de despesa) ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0.5dp"
+                app:strokeColor="@color/border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROPORÇÃO DE GASTOS POR CATEGORIA"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="12dp"/>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/graficoPizza"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp" />
+
+                    <!-- Legenda dinâmica: preenchida em runtime via Java,
+                         usando as mesmas cores das fatias do gráfico -->
+                    <LinearLayout
+                        android:id="@+id/legendaPizza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ── CARD GRÁFICO DE LINHA ── -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0.5dp"
+                app:strokeColor="@color/border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EVOLUÇÃO DO SALDO NO TEMPO"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="12dp"/>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/graficoLinha"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

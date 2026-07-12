@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "234815220868",
+    "firebase_url": "https://crud-produtos-744ee-default-rtdb.firebaseio.com",
+    "project_id": "crud-produtos-744ee",
+    "storage_bucket": "crud-produtos-744ee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234815220868:android:57a129fe815e17c17766d1",
+        "android_client_info": {
+          "package_name": "com.example.crud_produtos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk7O2eNIfpdtEK9AtgiEmn5H23anaW1jg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
